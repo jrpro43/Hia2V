@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>HIA AI - هوښیار مرستیال</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <!-- سایډبار -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="https://i.postimg.cc/g2Fdxx5v/file-00000000763c720c968a945c70f95511.png" alt="HIA AI Logo" class="logo-img">
+                    <span>HIA AI</span>
+                </div>
+                <button class="close-sidebar" id="closeSidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-content">
+                <button class="new-chat" id="newChat">
+                    <i class="fas fa-plus"></i> نوی خبرې اترې
+                </button>
+                
+                <div class="history-section">
+                    <h3><i class="fas fa-history"></i> وروستي خبرې</h3>
+                    <div id="historyList" class="history-list"></div>
+                </div>
+                
+                <div class="sidebar-footer">
+                    <button class="menu-item" id="statsBtn">
+                        <i class="fas fa-chart-bar"></i> احصایې
+                    </button>
+                    <button class="menu-item" id="knowledgeBtn">
+                        <i class="fas fa-database"></i> پوهه
+                    </button>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- اصلي چت ساحه -->
+        <main class="chat-area">
+            <header class="chat-header">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="header-logo">
+                    <img src="https://i.postimg.cc/g2Fdxx5v/file-00000000763c720c968a945c70f95511.png" alt="HIA AI" class="header-logo-img">
+                    <div>
+                        <h1>HIA AI</h1>
+                        <p>هوښیار مرستیال · د حافظې سیسټم</p>
+                    </div>
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </header>
+            
+            <!-- پیغامونه -->
+            <div class="messages" id="messages">
+                <div class="welcome">
+                    <div class="welcome-icon">
+                        <img src="https://i.postimg.cc/g2Fdxx5v/file-00000000763c720c968a945c70f95511.png" alt="HIA AI">
+                    </div>
+                    <h2>HIA AI ته ښه راغلاست</h2>
+                    <p>زه ستاسو هوښیار مرستیال یم چې حافظه لرم. ما سره په پښتو، دري یا انګلیسي کې خبرې وکړئ!</p>
+                    <div class="examples">
+                        <button class="example">What is Artificial Intelligence?</button>
+                        <button class="example">Who are you?</button>
+                        <button class="example">Tell me about HIA AI</button>
+                        <button class="example">سلام! ته څنګه یې؟</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- د پیغام لیکلو ساحه -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <textarea id="messageInput" placeholder="خپله پوښتنه دلته ولیکئ..." rows="1"></textarea>
+                    <button id="sendBtn" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="input-info">
+                    <span id="typingIndicator" class="typing-indicator" style="display: none;">
+                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-circle"></i>
+                    </span>
+                    <span>HIA AI · د حافظې سیسټم فعال دی</span>
+                </div>
+            </div>
+        </main>
+        
+        <!-- د پوهې پینل -->
+        <div class="panel knowledge-panel" id="knowledgePanel">
+            <div class="panel-header">
+                <h3><i class="fas fa-database"></i> زما پوهه</h3>
+                <button class="close-panel" id="closeKnowledge">&times;</button>
+            </div>
+            <div class="panel-body" id="knowledgeBody">
+                <div class="loading">Loading...</div>
+            </div>
+        </div>
+        
+        <!-- د احصایې پینل -->
+        <div class="panel stats-panel" id="statsPanel">
+            <div class="panel-header">
+                <h3><i class="fas fa-chart-bar"></i> احصایې</h3>
+                <button class="close-panel" id="closeStats">&times;</button>
+            </div>
+            <div class="panel-body" id="statsBody">
+                <div class="loading">Loading...</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
